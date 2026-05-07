@@ -13,8 +13,8 @@ Proyek ini merupakan sistem automasi berbasis **ESP32** yang dirancang untuk mem
 Proyek ini dikembangkan oleh kelompok mahasiswa Polban:
 * **Aldean Satrio** - *Lead Software & IoT Integrator*
 * **Abdullah Faaiz Al Waafi** - *Hardware Specialist & Power Management*
-* **Fatih Wibowo** - *AC Circuit & Safety Engineer*
-* **Alviansyah** - *Mechanical Design & Sensor Calibration*
+* **M.Fatih Wibowo** - *AC Circuit & Safety Engineer*
+* **M.Alviansyah** - *Mechanical Design & Sensor Calibration*
 
 ---
 
