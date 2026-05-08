@@ -1,41 +1,31 @@
-# 🚀 Sistem Kontrol Terpadu & Monitoring Lingkungan (Sispeng)
-### **Politeknik Negeri Bandung - Teknik Refrigerasi dan Tata Udara**
+# 孵化器 Cyber-Inkubator IoT ESP32
 
-![Status](https://img.shields.io/badge/Status-Development-yellow)
-![Platform](https://img.shields.io/badge/Platform-ESP32-blue)
-![IoT](https://img.shields.io/badge/IoT-Enabled-green)
+Sistem monitoring inkubator berbasis IoT dengan tema **Cyberpunk UI**. Proyek ini menggunakan ESP32 untuk mengontrol lingkungan inkubator secara otomatis.
 
-Proyek ini merupakan sistem automasi berbasis **ESP32** yang dirancang untuk memantau parameter lingkungan (Suhu & Cahaya) serta mengontrol berbagai beban elektrik secara otomatis maupun manual. Data pemantauan disimpan secara offline ke dalam **SD Card** dan didokumentasikan secara online melalui **GitHub Pages**.
+## 🚀 Fitur
+- **Dashboard Cyberpunk**: UI Futuristik menggunakan CSS neon.
+- **Real-time Chart**: Grafik suhu menggunakan Chart.js.
+- **Auto-Spin Relay**: Motor berputar otomatis berdasarkan interval yang bisa diatur lewat Web.
+- **Dual Channel Control**: Kontrol Kipas (Channel 2) dan Motor (Channel 1).
+- **Monitoring LDR & DHT22**: Pantau cahaya dan suhu secara real-time.
 
----
+## 🛠️ Komponen
+- ESP32 DevKit V1
+- Sensor DHT22 (Suhu & Kelembapan)
+- Sensor LDR (Cahaya)
+- Relay 4 Channel (Menggunakan 2 Channel)
+- Motor DC & Kipas DC
+- Step Down LM2596 (12V to 5V)
 
-## 👥 Anggota Tim
-Proyek ini dikembangkan oleh kelompok mahasiswa Polban:
-* **Aldean Satrio** - *Lead Software & IoT Integrator*
-* **Abdullah Faaiz Al Waafi** - *Hardware Specialist & Power Management*
-* **M.Fatih Wibowo** - *AC Circuit & Safety Engineer*
-* **M.Alviansyah** - *Mechanical Design & Sensor Calibration*
+## 📌 Pinout
+| Komponen | Pin ESP32 |
+|----------|-----------|
+| DHT22    | GPIO 4    |
+| LDR      | GPIO 34   |
+| Relay 1 (Motor) | GPIO 26 |
+| Relay 2 (Kipas) | GPIO 27 |
 
----
-
-## 🛠️ Spesifikasi Perangkat
-| Komponen | Deskripsi |
-| :--- | :--- |
-| **Microcontroller** | ESP32 DevKit V1 |
-| **Sensor Suhu** | DHT22 (High Accuracy) |
-| **Sensor Cahaya** | LDR (Light Dependent Resistor) |
-| **Display** | LCD 16x2 with I2C Module |
-| **Storage** | Micro SD Card Module (Data Logging) |
-| **Relay** | 4-Channel 12V Module |
-| **Beban DC** | Motor DC 12V, Kipas 12V & 5V |
-| **Beban AC** | Lampu AC 10W & 12W |
-
----
-
-## 📋 Fitur Utama
-1. **Real-time Monitoring**: Menampilkan data suhu dan intensitas cahaya pada LCD 16x2.
-2. **Data Logging**: Menyimpan log data sensor ke dalam file `.csv` di SD Card untuk analisis lebih lanjut.
-3. **Smart Control**: 
-   * Automasi kipas berdasarkan ambang batas suhu.
-   * Kontrol lampu dan motor menggunakan relay.
-4. **IoT Dashboard
+## ⚙️ Cara Pakai
+1. Masukkan library `SimpleDHT` di Arduino IDE.
+2. Ganti SSID & Password WiFi.
+3. Upload kode dan buka IP ESP32 di browser.
